@@ -177,7 +177,7 @@
       {
         "name": "Toggle WiFi",
         "actionType": "TOGGLE_WIFI",
-        "pattern": "^(?:turn|switch|flip) (?:the )?(?:(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch))$",
+        "pattern": "^(?:turn|switch|flip) (?:the )?(?:(?:wifi|wi-fi|wireless) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:wifi|wi-fi|wireless))$",
         "examples": [
           "turn on wifi",
           "turn off wifi"
@@ -186,7 +186,7 @@
       {
         "name": "Toggle Bluetooth",
         "actionType": "TOGGLE_BLUETOOTH",
-        "pattern": "^(?:turn|switch|flip) (?:the )?(?:(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch))$",
+        "pattern": "^(?:turn|switch|flip) (?:the )?(?:(?:bluetooth|bt) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:bluetooth|bt))$",
         "examples": [
           "turn on bluetooth"
         ]
@@ -194,7 +194,7 @@
       {
         "name": "Flashlight",
         "actionType": "TOGGLE_FLASHLIGHT",
-        "pattern": "^(?:turn|switch|flip) (?:the )?(?:(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch))$",
+        "pattern": "^(?:turn|switch|flip) (?:the )?(?:(?:flashlight|torch) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:flashlight|torch))$",
         "examples": [
           "turn on flashlight"
         ]
@@ -403,7 +403,7 @@
       {
         "name": "Lights",
         "actionType": "MESH_RELAY",
-        "pattern": "^(?:turn|switch) (?:the )?lights? (?:on|off)$",
+        "pattern": "^(?:turn|switch) (?:the )?(?:(?:the )?lights? (?:on|off)|(?:on|off) (?:the )?lights?)$",
         "examples": [
           "turn on the lights"
         ]
