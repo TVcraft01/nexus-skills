@@ -7,16 +7,92 @@
     "author": "Nexus",
     "repo": "TVcraft01/nexus-skills",
     "commands": [
-      {"name": "Play Music", "actionType": "PLAY_MEDIA", "pattern": "^(?:play|listen to) (.+)$", "examples": ["play jazz", "play my playlist"]},
-      {"name": "Play On App", "actionType": "PLAY_MEDIA_APP", "pattern": "^(?:play|listen to) (.+?) (?:on|in|with) (spotify|deezer|youtube music|apple music|amazon music|tidal|soundcloud|pandora)$", "examples": ["play jazz on spotify"]},
-      {"name": "Pause Music", "actionType": "PAUSE_MEDIA", "pattern": "^(?:pause|stop) (?:the )?(?:music|audio|song|track|playback)$", "examples": ["pause music", "stop audio"]},
-      {"name": "Resume Music", "actionType": "MEDIA_CONTROL", "pattern": "^(?:resume|continue) (?:the )?(?:music|audio|playback)$", "payloadTemplate": "resume", "examples": ["resume music"]},
-      {"name": "Next Track", "actionType": "MEDIA_CONTROL", "pattern": "^(?:next|skip) (?:track|song)$", "payloadTemplate": "next", "examples": ["next track", "skip song"]},
-      {"name": "Previous Track", "actionType": "MEDIA_CONTROL", "pattern": "^(?:previous|last|back) (?:track|song)$", "payloadTemplate": "previous", "examples": ["previous track"]},
-      {"name": "What Is Playing", "actionType": "MEDIA_CONTROL", "pattern": "^what(?:'s| is)? (?:currently )?playing$", "payloadTemplate": "info", "examples": ["what's playing"]},
-      {"name": "Play Flow", "actionType": "PLAY_MEDIA", "pattern": "^(?:play )?(?:my )?flow$", "payloadTemplate": "my flow", "examples": ["play my flow", "flow"]}
+      {
+        "name": "Play Music",
+        "actionType": "PLAY_MEDIA",
+        "pattern": "^(?:play|listen to) (.+)$",
+        "examples": [
+          "play jazz",
+          "play my playlist"
+        ]
+      },
+      {
+        "name": "Play On App",
+        "actionType": "PLAY_MEDIA_APP",
+        "pattern": "^(?:play|listen to) (.+?) (?:on|in|with) (spotify|deezer|youtube music|apple music|amazon music|tidal|soundcloud|pandora)$",
+        "examples": [
+          "play jazz on spotify"
+        ]
+      },
+      {
+        "name": "Pause Music",
+        "actionType": "PAUSE_MEDIA",
+        "pattern": "^(?:pause|stop) (?:the )?(?:music|audio|song|track|playback)$",
+        "examples": [
+          "pause music",
+          "stop audio"
+        ]
+      },
+      {
+        "name": "Resume Music",
+        "actionType": "MEDIA_CONTROL",
+        "pattern": "^(?:resume|continue) (?:the )?(?:music|audio|playback)$",
+        "payloadTemplate": "resume",
+        "examples": [
+          "resume music"
+        ]
+      },
+      {
+        "name": "Next Track",
+        "actionType": "MEDIA_CONTROL",
+        "pattern": "^(?:next|skip) (?:track|song)$",
+        "payloadTemplate": "next",
+        "examples": [
+          "next track",
+          "skip song"
+        ]
+      },
+      {
+        "name": "Previous Track",
+        "actionType": "MEDIA_CONTROL",
+        "pattern": "^(?:previous|last|back) (?:track|song)$",
+        "payloadTemplate": "previous",
+        "examples": [
+          "previous track"
+        ]
+      },
+      {
+        "name": "What Is Playing",
+        "actionType": "MEDIA_CONTROL",
+        "pattern": "^what(?:'s| is)? (?:currently )?playing$",
+        "payloadTemplate": "info",
+        "examples": [
+          "what's playing"
+        ]
+      },
+      {
+        "name": "Play Flow",
+        "actionType": "PLAY_MEDIA",
+        "pattern": "^(?:play )?(?:my )?flow$",
+        "payloadTemplate": "my flow",
+        "examples": [
+          "play my flow",
+          "flow"
+        ]
+      }
     ],
-    "grammar": ["play", "pause", "resume", "next track", "previous song", "what's playing", "skip", "stop music", "listen to", "my flow"]
+    "grammar": [
+      "play",
+      "pause",
+      "resume",
+      "next track",
+      "previous song",
+      "what's playing",
+      "skip",
+      "stop music",
+      "listen to",
+      "my flow"
+    ]
   },
   {
     "id": "com.nexus.timer",
@@ -26,14 +102,69 @@
     "author": "Nexus",
     "repo": "TVcraft01/nexus-skills",
     "commands": [
-      {"name": "Set Timer", "actionType": "SET_TIMER", "pattern": "^(?:set )?(?:a )?timer (?:for )?(\\d+) (seconds?|minutes?|mins?|hours?|hrs?)$", "examples": ["set a timer for 60 seconds", "timer 5 minutes"]},
-      {"name": "Set Alarm", "actionType": "SET_ALARM", "pattern": "^(?:set )?(?:an?|the)? ?alarm (?:for )?(\\d{1,2})(?::(\\d{2}))? ?(am|pm)?$", "examples": ["set an alarm for 7 am", "alarm 7:30 pm"]},
-      {"name": "Cancel Timer", "actionType": "CANCEL_ALARM_TIMER", "pattern": "^cancel (?:my )?(?:the )?(?:timer|alarm)s?$", "examples": ["cancel my timer"]},
-      {"name": "Next Alarm", "actionType": "GET_NEXT_ALARM", "pattern": "^next alarm$", "examples": ["next alarm"]},
-      {"name": "Sleep Timer", "actionType": "SLEEP_TIMER", "pattern": "^(?:sleep timer|(?:stop|pause) (?:the )?(?:music|audio|playback)? ?(?:in|after)) (?:for )?(\\d+) (minutes?|mins?|hours?|hrs?)$", "examples": ["sleep timer 30 minutes", "stop music in 30 minutes"]},
-      {"name": "Countdown", "actionType": "SET_TIMER", "pattern": "^countdown (\\d+) (minutes?|mins?|hours?|hrs?)$", "examples": ["countdown 30 minutes"]}
+      {
+        "name": "Set Timer",
+        "actionType": "SET_TIMER",
+        "pattern": "^(?:set )?(?:a )?timer (?:for )?(\\d+) (seconds?|minutes?|mins?|hours?|hrs?)$",
+        "examples": [
+          "set a timer for 60 seconds",
+          "timer 5 minutes"
+        ]
+      },
+      {
+        "name": "Set Alarm",
+        "actionType": "SET_ALARM",
+        "pattern": "^(?:set )?(?:an?|the)? ?alarm (?:for )?(\\d{1,2})(?::(\\d{2}))? ?(am|pm)?$",
+        "examples": [
+          "set an alarm for 7 am",
+          "alarm 7:30 pm"
+        ]
+      },
+      {
+        "name": "Cancel Timer",
+        "actionType": "CANCEL_ALARM_TIMER",
+        "pattern": "^cancel (?:my )?(?:the )?(?:timer|alarm)s?$",
+        "examples": [
+          "cancel my timer"
+        ]
+      },
+      {
+        "name": "Next Alarm",
+        "actionType": "GET_NEXT_ALARM",
+        "pattern": "^next alarm$",
+        "examples": [
+          "next alarm"
+        ]
+      },
+      {
+        "name": "Sleep Timer",
+        "actionType": "SLEEP_TIMER",
+        "pattern": "^(?:sleep timer|(?:stop|pause) (?:the )?(?:music|audio|playback)? ?(?:in|after)) (?:for )?(\\d+) (minutes?|mins?|hours?|hrs?)$",
+        "examples": [
+          "sleep timer 30 minutes",
+          "stop music in 30 minutes"
+        ]
+      },
+      {
+        "name": "Countdown",
+        "actionType": "SET_TIMER",
+        "pattern": "^countdown (\\d+) (minutes?|mins?|hours?|hrs?)$",
+        "examples": [
+          "countdown 30 minutes"
+        ]
+      }
     ],
-    "grammar": ["set timer", "alarm", "sleep timer", "countdown", "cancel timer", "next alarm", "minutes", "hours", "seconds"]
+    "grammar": [
+      "set timer",
+      "alarm",
+      "sleep timer",
+      "countdown",
+      "cancel timer",
+      "next alarm",
+      "minutes",
+      "hours",
+      "seconds"
+    ]
   },
   {
     "id": "com.nexus.system",
@@ -43,17 +174,92 @@
     "author": "Nexus",
     "repo": "TVcraft01/nexus-skills",
     "commands": [
-      {"name": "Toggle WiFi", "actionType": "TOGGLE_WIFI", "pattern": "^(?:turn|switch|flip) (?:the )?(?:wifi|wi-fi|wireless) (?:on|off|enable|disable)$", "examples": ["turn on wifi", "turn off wifi"]},
-      {"name": "Toggle Bluetooth", "actionType": "TOGGLE_BLUETOOTH", "pattern": "^(?:turn|switch|flip) (?:the )?bluetooth (?:on|off|enable|disable)$", "examples": ["turn on bluetooth"]},
-      {"name": "Flashlight", "actionType": "TOGGLE_FLASHLIGHT", "pattern": "^(?:turn|switch|flip) (?:the )?(?:flashlight|torch) (?:on|off|enable|disable)$", "examples": ["turn on flashlight"]},
-      {"name": "Set Volume", "actionType": "SET_VOLUME", "pattern": "^(?:set|change) (?:the )?volume (?:to )?(\\d+) ?(?:%|percent)?$", "examples": ["set volume to 50"]},
-      {"name": "Volume Up", "actionType": "ADJUST_VOLUME", "pattern": "^(?:turn|make) (?:the )?(?:volume|sound) (?:up|louder|higher)$", "payloadTemplate": "10", "examples": ["volume up"]},
-      {"name": "Volume Down", "actionType": "ADJUST_VOLUME", "pattern": "^(?:turn|make) (?:the )?(?:volume|sound) (?:down|lower|softer|quieter)$", "payloadTemplate": "-10", "examples": ["volume down"]},
-      {"name": "Mute", "actionType": "MUTE_VOLUME", "pattern": "^(?:mute|silence) (?:the )?(?:volume|sound|audio)$", "examples": ["mute the volume"]},
-      {"name": "Toggle DND", "actionType": "TOGGLE_DND", "pattern": "^(?:turn|switch) (?:on|off|enable|disable) (?:do not disturb|dnd)$", "examples": ["turn on do not disturb"]},
-      {"name": "Set Brightness", "actionType": "SET_BRIGHTNESS", "pattern": "^(?:set|change) (?:the )?brightness (?:to )?(\\d+) ?(?:%|percent)?$", "examples": ["set brightness to 50"]}
+      {
+        "name": "Toggle WiFi",
+        "actionType": "TOGGLE_WIFI",
+        "pattern": "^(?:turn|switch|flip) (?:the )?(?:(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch))$",
+        "examples": [
+          "turn on wifi",
+          "turn off wifi"
+        ]
+      },
+      {
+        "name": "Toggle Bluetooth",
+        "actionType": "TOGGLE_BLUETOOTH",
+        "pattern": "^(?:turn|switch|flip) (?:the )?(?:(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch))$",
+        "examples": [
+          "turn on bluetooth"
+        ]
+      },
+      {
+        "name": "Flashlight",
+        "actionType": "TOGGLE_FLASHLIGHT",
+        "pattern": "^(?:turn|switch|flip) (?:the )?(?:(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:wifi|wi-fi|wireless|bluetooth|flashlight|torch))$",
+        "examples": [
+          "turn on flashlight"
+        ]
+      },
+      {
+        "name": "Set Volume",
+        "actionType": "SET_VOLUME",
+        "pattern": "^(?:set|change) (?:the )?volume (?:to )?(\\d+) ?(?:%|percent)?$",
+        "examples": [
+          "set volume to 50"
+        ]
+      },
+      {
+        "name": "Volume Up",
+        "actionType": "ADJUST_VOLUME",
+        "pattern": "^(?:turn|make) (?:the )?(?:volume|sound) (?:up|louder|higher)$",
+        "payloadTemplate": "10",
+        "examples": [
+          "volume up"
+        ]
+      },
+      {
+        "name": "Volume Down",
+        "actionType": "ADJUST_VOLUME",
+        "pattern": "^(?:turn|make) (?:the )?(?:volume|sound) (?:down|lower|softer|quieter)$",
+        "payloadTemplate": "-10",
+        "examples": [
+          "volume down"
+        ]
+      },
+      {
+        "name": "Mute",
+        "actionType": "MUTE_VOLUME",
+        "pattern": "^(?:mute|silence) (?:the )?(?:volume|sound|audio)$",
+        "examples": [
+          "mute the volume"
+        ]
+      },
+      {
+        "name": "Toggle DND",
+        "actionType": "TOGGLE_DND",
+        "pattern": "^(?:turn|switch) (?:the )?(?:(?:do not disturb|dnd) (?:on|off|enable|disable)|(?:on|off|enable|disable) (?:the )?(?:do not disturb|dnd))$",
+        "examples": [
+          "turn on do not disturb"
+        ]
+      },
+      {
+        "name": "Set Brightness",
+        "actionType": "SET_BRIGHTNESS",
+        "pattern": "^(?:set|change) (?:the )?brightness (?:to )?(\\d+) ?(?:%|percent)?$",
+        "examples": [
+          "set brightness to 50"
+        ]
+      }
     ],
-    "grammar": ["wifi", "bluetooth", "flashlight", "volume", "brightness", "do not disturb", "mute", "torch"]
+    "grammar": [
+      "wifi",
+      "bluetooth",
+      "flashlight",
+      "volume",
+      "brightness",
+      "do not disturb",
+      "mute",
+      "torch"
+    ]
   },
   {
     "id": "com.nexus.info",
@@ -63,16 +269,86 @@
     "author": "Nexus",
     "repo": "TVcraft01/nexus-skills",
     "commands": [
-      {"name": "Get Time", "actionType": "GET_TIME_DATE", "pattern": "^what(?:'s| is)? (?:the )?(?:time|date|day)(?: (?:is it|today))?$", "examples": ["what time is it", "what's the date"]},
-      {"name": "Get Weather", "actionType": "GET_WEATHER", "pattern": "^(?:what(?:'s| is)? (?:the )?weather(?: like)?|how(?:'s| is) (?:the )?weather|is it (?:raining|going to rain))$", "examples": ["what's the weather"]},
-      {"name": "Get Battery", "actionType": "GET_BATTERY_STATUS", "pattern": "^(?:what(?:'s| is)? )?(?:my )?battery(?: level| status)?$", "examples": ["what's my battery"]},
-      {"name": "Tell Me A Joke", "actionType": "GET_JOKE", "pattern": "^tell me (?:a )?joke$", "examples": ["tell me a joke"]},
-      {"name": "Roll Dice", "actionType": "ROLL_DICE", "pattern": "^(?:roll|throw) (?:a )?dice$", "payloadTemplate": "6", "examples": ["roll dice"]},
-      {"name": "Flip Coin", "actionType": "FLIP_COIN", "pattern": "^flip (?:a )?coin$", "examples": ["flip a coin"]},
-      {"name": "Open Calendar", "actionType": "OPEN_APP", "pattern": "^open calendar$", "payloadTemplate": "com.google.android.calendar", "examples": ["open calendar"]},
-      {"name": "Today Schedule", "actionType": "GET_TODAY_SCHEDULE", "pattern": "^(?:what(?:'s| is)? (?:on )?(?:my )?(?:calendar|schedule)|my schedule (?:today)|show (?:my )?(?:calendar|schedule))$", "examples": ["what's on my calendar today"]}
+      {
+        "name": "Get Time",
+        "actionType": "GET_TIME_DATE",
+        "pattern": "^what(?:'s| is)? (?:the )?(?:time|date|day)(?: (?:is it|today))?$",
+        "examples": [
+          "what time is it",
+          "what's the date"
+        ]
+      },
+      {
+        "name": "Get Weather",
+        "actionType": "GET_WEATHER",
+        "pattern": "^(?:what(?:'s| is)? (?:the )?weather(?: like)?|how(?:'s| is) (?:the )?weather|is it (?:raining|going to rain))$",
+        "examples": [
+          "what's the weather"
+        ]
+      },
+      {
+        "name": "Get Battery",
+        "actionType": "GET_BATTERY_STATUS",
+        "pattern": "^(?:what(?:'s| is)? )?(?:my )?battery(?: level| status)?$",
+        "examples": [
+          "what's my battery"
+        ]
+      },
+      {
+        "name": "Tell Me A Joke",
+        "actionType": "GET_JOKE",
+        "pattern": "^tell me (?:a )?joke$",
+        "examples": [
+          "tell me a joke"
+        ]
+      },
+      {
+        "name": "Roll Dice",
+        "actionType": "ROLL_DICE",
+        "pattern": "^(?:roll|throw) (?:a )?dice$",
+        "payloadTemplate": "6",
+        "examples": [
+          "roll dice"
+        ]
+      },
+      {
+        "name": "Flip Coin",
+        "actionType": "FLIP_COIN",
+        "pattern": "^flip (?:a )?coin$",
+        "examples": [
+          "flip a coin"
+        ]
+      },
+      {
+        "name": "Open Calendar",
+        "actionType": "OPEN_APP",
+        "pattern": "^open calendar$",
+        "payloadTemplate": "com.google.android.calendar",
+        "examples": [
+          "open calendar"
+        ]
+      },
+      {
+        "name": "Today Schedule",
+        "actionType": "GET_TODAY_SCHEDULE",
+        "pattern": "^(?:what(?:'s| is)? (?:on )?(?:my )?(?:calendar|schedule)|my schedule (?:today)|show (?:my )?(?:calendar|schedule))$",
+        "examples": [
+          "what's on my calendar today"
+        ]
+      }
     ],
-    "grammar": ["time", "date", "day", "weather", "battery", "joke", "roll dice", "flip coin", "calendar", "schedule"]
+    "grammar": [
+      "time",
+      "date",
+      "day",
+      "weather",
+      "battery",
+      "joke",
+      "roll dice",
+      "flip coin",
+      "calendar",
+      "schedule"
+    ]
   },
   {
     "id": "com.nexus.nav",
@@ -82,15 +358,76 @@
     "author": "Nexus",
     "repo": "TVcraft01/nexus-skills",
     "commands": [
-      {"name": "Navigate", "actionType": "NAVIGATE", "pattern": "^(?:navigate|directions?|take me|drive) (?:to )?(.+?)(?: (?:on|with|via|using) (waze|google maps|maps))?$", "examples": ["navigate to Paris", "take me to work on waze"]},
-      {"name": "Open App", "actionType": "OPEN_APP", "pattern": "^open (.+)$", "examples": ["open maps", "open camera"]},
-      {"name": "Web Search", "actionType": "WEB_SEARCH", "pattern": "^(?:search|find|google) (?:for )?(.+)$", "examples": ["search for restaurants"]},
-      {"name": "Go To", "actionType": "OPEN_WEBSITE", "pattern": "^go to (.+)$", "examples": ["go to github.com"]},
-      {"name": "Smart Home", "actionType": "SMART_HOME", "pattern": "^(?:turn|set|change|dim) (?:the )?(.+?) (?:to )?(\\d+%|red|blue|green|warm|cool|on|off)$", "examples": ["turn the lights to 50%"]},
-      {"name": "Lights", "actionType": "MESH_RELAY", "pattern": "^(?:turn|switch) (?:the )?lights? (?:on|off)$", "examples": ["turn on the lights"]},
-      {"name": "Relay", "actionType": "MESH_RELAY", "pattern": "^relay (.+)$", "examples": ["relay turn on lights"]}
+      {
+        "name": "Navigate",
+        "actionType": "NAVIGATE",
+        "pattern": "^(?:navigate|directions?|take me|drive) (?:to )?(.+?)(?: (?:on|with|via|using) (waze|google maps|maps))?$",
+        "examples": [
+          "navigate to Paris",
+          "take me to work on waze"
+        ]
+      },
+      {
+        "name": "Open App",
+        "actionType": "OPEN_APP",
+        "pattern": "^open (.+)$",
+        "examples": [
+          "open maps",
+          "open camera"
+        ]
+      },
+      {
+        "name": "Web Search",
+        "actionType": "WEB_SEARCH",
+        "pattern": "^(?:search|find|google) (?:for )?(.+)$",
+        "examples": [
+          "search for restaurants"
+        ]
+      },
+      {
+        "name": "Go To",
+        "actionType": "OPEN_WEBSITE",
+        "pattern": "^go to (.+)$",
+        "examples": [
+          "go to github.com"
+        ]
+      },
+      {
+        "name": "Smart Home",
+        "actionType": "SMART_HOME",
+        "pattern": "^(?:turn|set|change|dim) (?:the )?(.+?) (?:to )?(\\d+%|red|blue|green|warm|cool|on|off)$",
+        "examples": [
+          "turn the lights to 50%"
+        ]
+      },
+      {
+        "name": "Lights",
+        "actionType": "MESH_RELAY",
+        "pattern": "^(?:turn|switch) (?:the )?lights? (?:on|off)$",
+        "examples": [
+          "turn on the lights"
+        ]
+      },
+      {
+        "name": "Relay",
+        "actionType": "MESH_RELAY",
+        "pattern": "^relay (.+)$",
+        "examples": [
+          "relay turn on lights"
+        ]
+      }
     ],
-    "grammar": ["navigate", "directions", "take me to", "open", "search", "lights", "thermostat", "relay", "go to"]
+    "grammar": [
+      "navigate",
+      "directions",
+      "take me to",
+      "open",
+      "search",
+      "lights",
+      "thermostat",
+      "relay",
+      "go to"
+    ]
   },
   {
     "id": "com.nexus.notes",
@@ -100,18 +437,107 @@
     "author": "Nexus",
     "repo": "TVcraft01/nexus-skills",
     "commands": [
-      {"name": "Take Note", "actionType": "TAKE_NOTE", "pattern": "^(?:take|make|save) (?:a )?note (?:that |to |of )?(.+)$", "examples": ["take a note buy milk"]},
-      {"name": "Add To List", "actionType": "LIST_ACTION", "pattern": "^(?:add|put) (.+?) (?:to|on) (?:my )?(shopping|to-?do) list$", "examples": ["add milk to my shopping list"]},
-      {"name": "Set Reminder", "actionType": "SET_REMINDER", "pattern": "^remind me (?:to )?(.+)$", "examples": ["remind me to call mom"]},
-      {"name": "Call Contact", "actionType": "CALL_CONTACT", "pattern": "^(?:call|phone|dial) (.+)$", "examples": ["call mom"]},
-      {"name": "Send Text", "actionType": "SEND_TEXT", "pattern": "^(?:text|sms|message) (.+?)(?: (?:saying|that) (.+))?$", "examples": ["text mom saying hello"]},
-      {"name": "Send Email", "actionType": "SEND_EMAIL", "pattern": "^(?:email|send an email to) (.+)$", "examples": ["email john@example.com"]},
-      {"name": "Calculate", "actionType": "CALCULATE", "pattern": "^(?:calculate|compute|what is) (-?[0-9.]+) (times|multiplied by|x|divided by|over|plus|minus|[+\\-*/]) (-?[0-9.]+)$", "examples": ["calculate 5 plus 3"]},
-      {"name": "Define", "actionType": "SEARCH_INFO", "pattern": "^define (.+)$", "examples": ["define gravity"]},
-      {"name": "Spell", "actionType": "SEARCH_INFO", "pattern": "^how do you spell (.+)$", "examples": ["how do you spell Mississippi"]},
-      {"name": "Take Photo", "actionType": "OPEN_CAMERA", "pattern": "^take a (selfie|picture|photo)$", "examples": ["take a selfie"]},
-      {"name": "Record Video", "actionType": "RECORD_VIDEO", "pattern": "^(?:record|shoot|take) (?:a )?video$", "examples": ["record a video"]}
+      {
+        "name": "Take Note",
+        "actionType": "TAKE_NOTE",
+        "pattern": "^(?:take|make|save) (?:a )?note (?:that |to |of )?(.+)$",
+        "examples": [
+          "take a note buy milk"
+        ]
+      },
+      {
+        "name": "Add To List",
+        "actionType": "LIST_ACTION",
+        "pattern": "^(?:add|put) (.+?) (?:to|on) (?:my )?(shopping|to-?do) list$",
+        "examples": [
+          "add milk to my shopping list"
+        ]
+      },
+      {
+        "name": "Set Reminder",
+        "actionType": "SET_REMINDER",
+        "pattern": "^remind me (?:to )?(.+)$",
+        "examples": [
+          "remind me to call mom"
+        ]
+      },
+      {
+        "name": "Call Contact",
+        "actionType": "CALL_CONTACT",
+        "pattern": "^(?:call|phone|dial) (.+)$",
+        "examples": [
+          "call mom"
+        ]
+      },
+      {
+        "name": "Send Text",
+        "actionType": "SEND_TEXT",
+        "pattern": "^(?:text|sms|message) (.+?)(?: (?:saying|that) (.+))?$",
+        "examples": [
+          "text mom saying hello"
+        ]
+      },
+      {
+        "name": "Send Email",
+        "actionType": "SEND_EMAIL",
+        "pattern": "^(?:email|send an email to) (.+)$",
+        "examples": [
+          "email john@example.com"
+        ]
+      },
+      {
+        "name": "Calculate",
+        "actionType": "CALCULATE",
+        "pattern": "^(?:calculate|compute|what is) (-?[0-9.]+) (times|multiplied by|x|divided by|over|plus|minus|[+\\-*/]) (-?[0-9.]+)$",
+        "examples": [
+          "calculate 5 plus 3"
+        ]
+      },
+      {
+        "name": "Define",
+        "actionType": "SEARCH_INFO",
+        "pattern": "^define (.+)$",
+        "examples": [
+          "define gravity"
+        ]
+      },
+      {
+        "name": "Spell",
+        "actionType": "SEARCH_INFO",
+        "pattern": "^how do you spell (.+)$",
+        "examples": [
+          "how do you spell Mississippi"
+        ]
+      },
+      {
+        "name": "Take Photo",
+        "actionType": "OPEN_CAMERA",
+        "pattern": "^take a (selfie|picture|photo)$",
+        "examples": [
+          "take a selfie"
+        ]
+      },
+      {
+        "name": "Record Video",
+        "actionType": "RECORD_VIDEO",
+        "pattern": "^(?:record|shoot|take) (?:a )?video$",
+        "examples": [
+          "record a video"
+        ]
+      }
     ],
-    "grammar": ["note", "list", "reminder", "call", "text", "email", "calculate", "define", "spell", "camera", "video"]
+    "grammar": [
+      "note",
+      "list",
+      "reminder",
+      "call",
+      "text",
+      "email",
+      "calculate",
+      "define",
+      "spell",
+      "camera",
+      "video"
+    ]
   }
 ]
